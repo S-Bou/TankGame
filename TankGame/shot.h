@@ -12,8 +12,11 @@ class Shot: public QObject, public QGraphicsPixmapItem
     Q_OBJECT
 private:
     Player *jugador;
+
 public:
     Shot(Player*);
+
+
 public slots:
     void move();
 

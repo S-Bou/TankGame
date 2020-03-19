@@ -8,7 +8,7 @@ Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
     QTimer *timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(move()));
     timer->start(50);
-    while(pos().y()+10 < 0){}
+
 }
 
 void Shot::move()
@@ -26,12 +26,30 @@ void Shot::move()
     else if(rotacion == -360){setPos(x()   , y()-10);}
     else if(rotacion ==   45){setPos(x()+10, y()-10);}
 
-
     //Delete shot when exit of view
     if(pos().y()+10 < 0)
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Bullet deleted";
+        jugador->setShotState(false);
+        qDebug() << "Bullet up deleted";
+    }
+    else if(pos().x()+10 < 0)
+    {
+        scene()->removeItem(this);
+        delete this;
+        qDebug() << "Bullet left deleted";
+    }
+    else if(pos().y()+10 > 800)
+    {
+        scene()->removeItem(this);
+        delete this;
+        qDebug() << "Bullet down deleted";
+    }
+    else if(pos().x()+10 > 600)
+    {
+        scene()->removeItem(this);
+        delete this;
+        qDebug() << "Bullet right deleted";
     }
 }
