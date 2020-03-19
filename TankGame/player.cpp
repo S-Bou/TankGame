@@ -9,11 +9,11 @@ Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent)
 {
     setPixmap(QPixmap(":/images/playerTank.png"));
     setTransformOriginPoint(50, 50);
+    rotacion = 0;
 }
 
 void Player::keyPressEvent(QKeyEvent *event)
 {
-    //qDebug() << "MyRect knows that you pressed a key";
     if(event->key() == Qt::Key_A)
     {
         if(pos().x() > 0)
@@ -36,28 +36,25 @@ void Player::keyPressEvent(QKeyEvent *event)
     }
     else if(event->key() == Qt::Key_Q)
     {
-        if(rotacion <= -360){qDebug() << "Rotacion = 0"; rotacion = 0;}
+        if(rotacion <= -360){rotacion = 0;}
         rotacion -= 45;
         setRotation(rotacion);
     }
     else if(event->key() == Qt::Key_E)
     {
-        if(rotacion >= 360){qDebug() << "Rotacion = 0"; rotacion = 0;}
+        if(rotacion >= 360){rotacion = 0;}
         rotacion += 45;
         setRotation(rotacion);
     }
     else if(event->key() == Qt::Key_Space)
     {
-        //Create a bullet
-        //qDebug() << "Bullet created";
-        Shot *shot = new Shot;
-        shot->setPos(x(), y());
+        Shot *shot = new Shot(this);
+        shot->setPos(x()+40, y()+40);
         scene()->addItem(shot);
     }
-
 }
 
-int Player::setRotacion(void)
+int Player::getRotacion(void)
 {
     return rotacion;
 }

@@ -525,6 +525,7 @@ compiler_rcc_clean:
 qrc_res.cpp: ../TankGame/res.qrc \
 		C:/Qt/5.14.0/mingw73_64/bin/rcc.exe \
 		../TankGame/enemyTank.png \
+		../TankGame/shot.png \
 		../TankGame/playerTank.png
 	'C:\Qt\5.14.0\mingw73_64\bin\rcc.exe' -name res ../TankGame/res.qrc -o qrc_res.cpp
 
@@ -632,7 +633,7 @@ moc_player.cpp: ../TankGame/player.h \
 	'C:\Qt\5.14.0\mingw73_64\bin\moc.exe' $(DEFINES) --include 'C:/Users/bouyo/Documents/Sistemas Informáticos Industriales/TankGame/build-TankGame-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/moc_predefs.h' -IC:/Qt/5.14.0/mingw73_64/mkspecs/win32-g++ -I'C:/Users/bouyo/Documents/Sistemas Informáticos Industriales/TankGame/TankGame' -IC:/Qt/5.14.0/mingw73_64/include -IC:/Qt/5.14.0/mingw73_64/include/QtWidgets -IC:/Qt/5.14.0/mingw73_64/include/QtGui -IC:/Qt/5.14.0/mingw73_64/include/QtANGLE -IC:/Qt/5.14.0/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ../TankGame/player.h -o moc_player.cpp
 
 moc_shot.cpp: ../TankGame/shot.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsRectItem \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtguiglobal.h \
@@ -721,7 +722,17 @@ moc_shot.cpp: ../TankGame/shot.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qbrush.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qfont.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
+		../TankGame/player.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qtimer.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QDebug \
 		moc_predefs.h \
 		C:/Qt/5.14.0/mingw73_64/bin/moc.exe
 	'C:\Qt\5.14.0\mingw73_64\bin\moc.exe' $(DEFINES) --include 'C:/Users/bouyo/Documents/Sistemas Informáticos Industriales/TankGame/build-TankGame-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/moc_predefs.h' -IC:/Qt/5.14.0/mingw73_64/mkspecs/win32-g++ -I'C:/Users/bouyo/Documents/Sistemas Informáticos Industriales/TankGame/TankGame' -IC:/Qt/5.14.0/mingw73_64/include -IC:/Qt/5.14.0/mingw73_64/include/QtWidgets -IC:/Qt/5.14.0/mingw73_64/include/QtGui -IC:/Qt/5.14.0/mingw73_64/include/QtANGLE -IC:/Qt/5.14.0/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ../TankGame/shot.h -o moc_shot.cpp
@@ -960,13 +971,16 @@ player.o: ../TankGame/player.cpp ../TankGame/player.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtransform.h \
 		../TankGame/shot.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsRectItem \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qbrush.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qfont.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qtimer.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QDebug \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QKeyEvent \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qevent.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qkeysequence.h \
@@ -976,12 +990,11 @@ player.o: ../TankGame/player.cpp ../TankGame/player.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtouchdevice.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QPoint \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QDebug
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QPoint
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o player.o ../TankGame/player.cpp
 
 shot.o: ../TankGame/shot.cpp ../TankGame/shot.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsRectItem \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtguiglobal.h \
@@ -1070,17 +1083,16 @@ shot.o: ../TankGame/shot.cpp ../TankGame/shot.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtransform.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
-		../TankGame/player.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/qtimer.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qbrush.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qfont.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
+		../TankGame/player.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qtimer.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o shot.o ../TankGame/shot.cpp
 

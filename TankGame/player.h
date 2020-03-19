@@ -14,7 +14,9 @@ private:
 public:
     Player(QGraphicsItem *parent=nullptr);
     void keyPressEvent(QKeyEvent *event);
-    int setRotacion(void);
+
+public slots:
+    int getRotacion(void);
 
 };
 #endif // PLAYER_H

@@ -1,33 +1,33 @@
 #include "shot.h"
-#include "player.h"
-#include <QTimer>
-#include <QGraphicsScene>
-#include <QDebug>
 
-Shot::Shot()
+Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
 {
+    jugador = p;
+    setPixmap(QPixmap(":/images/shot.png"));
 
-    //Drew the rect (bullet)
-    setRect(0,0,10,50);
-    //connect
     QTimer *timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(move()));
-
     timer->start(50);
 }
 
-void Shot::move(void)
+void Shot::move()
 {
-    int rotacion = setRotacion();
+    int rotacion = jugador->getRotacion();
 
-    qDebug() << rotacion;
-    setPos(x(), y()-10);
+    if     (rotacion ==    0){setPos(x()   , y()-10);}
+    else if(rotacion ==  -45){setPos(x()-10, y()-10);}
+    else if(rotacion ==  -90){setPos(x()-10,    y());}
+    else if(rotacion == -135){setPos(x()-10, y()+10);}
+    else if(rotacion == -180){setPos(x()   , y()+10);}
+    else if(rotacion == -225){setPos(x()+10, y()+10);}
+    else if(rotacion == -270){setPos(x()+10,    y());}
+    else if(rotacion == -315){setPos(x()+10, y()-10);}
+    else if(rotacion == -360){setPos(x()   , y()-10);}
+    else if(rotacion ==   45){setPos(x()+10, y()-10);}
 
-    if     (rotacion == -45){setPos(x()-10, y()-10);}
-    else if(rotacion == 135){setPos(x()+10, y()+20);}
 
     //Delete shot when exit of view
-    if(pos().y()+rect().height() < 0)
+    if(pos().y() < 0)
     {
         scene()->removeItem(this);
         delete this;
