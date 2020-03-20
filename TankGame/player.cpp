@@ -12,35 +12,35 @@ void Player::keyPressEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_A)
     {
-        if(pos().x() > 0)
-        setPos(x()-10,y());
-    }
-    else if(event->key() == Qt::Key_D)
-    {
-        if(pos().x()+100 < 800)
-        setPos(x()+10,y());
-    }
-    else if(event->key() == Qt::Key_W)
-    {
-        if(pos().y() > 0)
-        setPos(x(),y()-10);
-    }
-    else if(event->key() == Qt::Key_S)
-    {
-        if(pos().y()+100 < 600)
-        setPos(x(),y()+10);
-    }
-    else if(event->key() == Qt::Key_Q)
-    {
         if(rotacion <= -360){rotacion = 0;}
             rotacion -= 45;
             setRotation(rotacion);
     }
-    else if(event->key() == Qt::Key_E)
+    else if(event->key() == Qt::Key_D)
     {
         if(rotacion >= 360){rotacion = 0;}
             rotacion += 45;
             setRotation(rotacion);
+    }
+    else if(event->key() == Qt::Key_W)
+    {
+        qDebug() << pos().x() << pos().y();
+
+        if(pos().x() >= 0       && pos().y() >= 0 &&
+           pos().x()+100 <= 800 && pos().y()+100 <= 600)
+           SetDireccionTank(rotacion);
+
+        if(pos().x() <= 0)setPos(x()+10, y());
+        if(pos().x()+100 >= 800)setPos(x()-10, y());
+        if(pos().y() <= 0)setPos(x(), y()+10);
+        if(pos().y()+100 >= 600)setPos(x(), y()-10);
+
+    }
+    else if(event->key() == Qt::Key_S)
+    {
+        if(pos().y()+100 < 600 && pos().x()+100 < 600)
+        SetDireccionTank(rotacion-180);
+        //setPos(x(),y()+10);
     }
     else if(event->key() == Qt::Key_Space)
     {
@@ -48,6 +48,29 @@ void Player::keyPressEvent(QKeyEvent *event)
         shot->setPos(x()+40, y()+40);
         scene()->addItem(shot);
     }
+}
+
+void Player::SetDireccionTank(int direccion)
+{
+    qDebug() << direccion;
+
+    if     (direccion ==    0){setPos(x()   , y()-10);}
+    else if(direccion ==  -45){setPos(x()-10, y()-10);}
+    else if(direccion ==  -90){setPos(x()-10,    y());}
+    else if(direccion == -135){setPos(x()-10, y()+10);}
+    else if(direccion == -180){setPos(x()   , y()+10);}
+    else if(direccion == -225){setPos(x()+10, y()+10);}
+    else if(direccion == -270){setPos(x()+10,    y());}
+    else if(direccion == -315){setPos(x()+10, y()-10);}
+    else if(direccion == -360){setPos(x()   , y()-10);}
+    else if(direccion ==   45){setPos(x()+10, y()-10);}
+    else if(direccion ==   90){setPos(x()+10,    y());}
+    else if(direccion ==  135){setPos(x()+10, y()+10);}
+    else if(direccion ==  180){setPos(x()   , y()+10);}
+    else if(direccion ==  225){setPos(x()-10, y()+10);}
+    else if(direccion ==  270){setPos(x()-10,    y());}
+    else if(direccion ==  315){setPos(x()-10, y()-10);}
+    else if(direccion ==  360){setPos(x()   , y()-10);}
 }
 
 int Player::getRotacion(void)

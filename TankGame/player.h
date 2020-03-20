@@ -12,10 +12,10 @@ class Player: public QObject, public QGraphicsPixmapItem
 private:
     int rotacion;
 
-
 public:
     Player(QGraphicsItem *parent=nullptr);
     void keyPressEvent(QKeyEvent *event);
+    void SetDireccionTank(int);
 
 public slots:
     int getRotacion(void);

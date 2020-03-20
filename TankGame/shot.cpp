@@ -13,6 +13,7 @@ Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
 
 void Shot::move()
 {
+    qDebug() << direccion;
 
     if     (direccion ==    0){setPos(x()   , y()-10);}
     else if(direccion ==  -45){setPos(x()-10, y()-10);}
@@ -24,6 +25,13 @@ void Shot::move()
     else if(direccion == -315){setPos(x()+10, y()-10);}
     else if(direccion == -360){setPos(x()   , y()-10);}
     else if(direccion ==   45){setPos(x()+10, y()-10);}
+    else if(direccion ==   90){setPos(x()+10,    y());}
+    else if(direccion ==  135){setPos(x()+10, y()+10);}
+    else if(direccion ==  180){setPos(x()   , y()+10);}
+    else if(direccion ==  225){setPos(x()-10, y()+10);}
+    else if(direccion ==  270){setPos(x()-10,    y());}
+    else if(direccion ==  315){setPos(x()-10, y()-10);}
+    else if(direccion ==  360){setPos(x()   , y()-10);}
 
     //Delete shot when exit of view
     if(pos().y()+10 < 0)
@@ -51,3 +59,5 @@ void Shot::move()
         qDebug() << "Bullet right deleted";
     }
 }
+
+
