@@ -1,0 +1,10 @@
+enemy.o
+game.o
+main.o
+player.o
+shot.o
+qrc_res.o
+moc_enemy.o
+moc_game.o
+moc_player.o
+moc_shot.o

@@ -3,15 +3,21 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QWidget>
+#include <QObject>
 #include "player.h"
+#include "enemy.h"
+#include <QTimer>
 
 class Game : public QGraphicsView
 {
+    Q_OBJECT
+private:
+    QGraphicsScene *scene;
+    Player *player;
+
 public:
     Game(QWidget *parent=nullptr);
 
-    QGraphicsScene *scene;
-    Player *player;
 };
 
 #endif // GAME_H

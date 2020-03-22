@@ -7,14 +7,12 @@ Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
     setPixmap(QPixmap(":/images/shot.png"));
 
     QTimer *timer = new QTimer();
-    connect(timer, SIGNAL(timeout()), this, SLOT(move()));
+    connect(timer, SIGNAL(timeout()), this, SLOT(moveShotPlayer()));
     timer->start(50);
 }
 
-void Shot::move()
+void Shot::moveShotPlayer()
 {
-    qDebug() << direccion;
-
     if     (direccion ==    0){setPos(x()   , y()-10);}
     else if(direccion ==  -45){setPos(x()-10, y()-10);}
     else if(direccion ==  -90){setPos(x()-10,    y());}
@@ -46,13 +44,13 @@ void Shot::move()
         delete this;
         qDebug() << "Bullet left deleted";
     }
-    else if(pos().y()+10 > 800)
+    else if(pos().y()+10 > 600)
     {
         scene()->removeItem(this);
         delete this;
         qDebug() << "Bullet down deleted";
     }
-    else if(pos().x()+10 > 600)
+    else if(pos().x()+10 > 800)
     {
         scene()->removeItem(this);
         delete this;

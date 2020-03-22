@@ -18,7 +18,7 @@ public:
     Shot(Player*);
 
 public slots:
-    void move();
+    void moveShotPlayer();
 
 };
 

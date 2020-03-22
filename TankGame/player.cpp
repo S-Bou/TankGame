@@ -24,8 +24,6 @@ void Player::keyPressEvent(QKeyEvent *event)
     }
     else if(event->key() == Qt::Key_W)
     {
-        qDebug() << pos().x() << pos().y();
-
         if(pos().x() >= 0       && pos().y() >= 0 &&
            pos().x()+100 <= 800 && pos().y()+100 <= 600)
            SetDireccionTank(rotacion);
@@ -40,7 +38,6 @@ void Player::keyPressEvent(QKeyEvent *event)
     {
         if(pos().y()+100 < 600 && pos().x()+100 < 600)
         SetDireccionTank(rotacion-180);
-        //setPos(x(),y()+10);
     }
     else if(event->key() == Qt::Key_Space)
     {
@@ -52,8 +49,6 @@ void Player::keyPressEvent(QKeyEvent *event)
 
 void Player::SetDireccionTank(int direccion)
 {
-    qDebug() << direccion;
-
     if     (direccion ==    0){setPos(x()   , y()-10);}
     else if(direccion ==  -45){setPos(x()-10, y()-10);}
     else if(direccion ==  -90){setPos(x()-10,    y());}
@@ -71,6 +66,13 @@ void Player::SetDireccionTank(int direccion)
     else if(direccion ==  270){setPos(x()-10,    y());}
     else if(direccion ==  315){setPos(x()-10, y()-10);}
     else if(direccion ==  360){setPos(x()   , y()-10);}
+}
+
+void Player::spawnEnemy(void)
+{
+    enemy = new Enemy();
+    scene()->addItem(enemy);
+    qDebug() << "Enemigo nuevo";
 }
 
 int Player::getRotacion(void)

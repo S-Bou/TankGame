@@ -3,5 +3,6 @@
         <file>playerTank.png</file>
         <file>enemyTank.png</file>
         <file>shot.png</file>
+        <file>grassTexture.jpg</file>
     </qresource>
 </RCC>
