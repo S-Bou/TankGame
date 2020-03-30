@@ -6,6 +6,8 @@
 #include <QObject>
 #include <QTimer>
 #include <QDebug>
+#include <QList>
+#include "enemy.h"
 
 class Shot: public QObject, public QGraphicsPixmapItem
 {

@@ -36,26 +36,39 @@ void Shot::moveShotPlayer()
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Bullet up deleted";
     }
     else if(pos().x()+10 < 0)
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Bullet left deleted";
     }
     else if(pos().y()+10 > 600)
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Bullet down deleted";
     }
     else if(pos().x()+10 > 800)
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Bullet right deleted";
     }
+
+    //When shot collides with enemy destroy both
+    QList<QGraphicsItem *> colliding_items = collidingItems();
+    for(int i=0, n=colliding_items.size(); i<n; ++i)
+    {
+        if(typeid(*(colliding_items[i])) == typeid (Enemy))
+        {   //Remove them both
+            scene()->removeItem(colliding_items[i]);
+            scene()->removeItem(this);
+            //Delete them both
+            delete colliding_items[i];
+            delete this;
+            return;
+        }
+    }
+
+
 }
 
 

@@ -43,24 +43,20 @@ void Enemy::moveEnemy()
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Enemy up deleted";
     }
     else if(pos().x()+100 < 0)
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Enemy left deleted";
     }
     else if(pos().y()+100 > 800)
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Enemy down deleted";
     }
     else if(pos().x()+100 > 1000)
     {
         scene()->removeItem(this);
         delete this;
-        qDebug() << "Enemy right deleted";
     }
 }

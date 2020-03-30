@@ -72,7 +72,6 @@ void Player::spawnEnemy(void)
 {
     enemy = new Enemy();
     scene()->addItem(enemy);
-    qDebug() << "Enemigo nuevo";
 }
 
 int Player::getRotacion(void)
