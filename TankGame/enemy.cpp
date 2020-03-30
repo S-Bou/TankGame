@@ -1,6 +1,8 @@
 #include "enemy.h"
-#include "player.h"
+#include "game.h"
 #include <QPoint>
+
+extern Game *game;
 
 Enemy::Enemy(): QObject(), QGraphicsPixmapItem()
 {
@@ -41,21 +43,25 @@ void Enemy::moveEnemy()
     //Delete enemy when exit of view
     if     (pos().y()+100 < 0)
     {
+        game->evaded->DecreaseEvaded();
         scene()->removeItem(this);
         delete this;
     }
     else if(pos().x()+100 < 0)
     {
+        game->evaded->DecreaseEvaded();
         scene()->removeItem(this);
         delete this;
     }
     else if(pos().y()+100 > 800)
     {
+        game->evaded->DecreaseEvaded();
         scene()->removeItem(this);
         delete this;
     }
     else if(pos().x()+100 > 1000)
     {
+        game->evaded->DecreaseEvaded();
         scene()->removeItem(this);
         delete this;
     }

@@ -17,15 +17,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     enemy.cpp \
+    evaded.cpp \
     game.cpp \
     main.cpp \
     player.cpp \
+    score.cpp \
     shot.cpp
 
 HEADERS += \
     enemy.h \
+    evaded.h \
     game.h \
     player.h \
+    score.h \
     shot.h
 
 # Default rules for deployment.

@@ -1,5 +1,7 @@
 #include "shot.h"
 
+extern Game *game;
+
 Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
 {
     jugador = p;
@@ -57,13 +59,16 @@ void Shot::moveShotPlayer()
     QList<QGraphicsItem *> colliding_items = collidingItems();
     for(int i=0, n=colliding_items.size(); i<n; ++i)
     {
-        if(typeid(*(colliding_items[i])) == typeid (Enemy))
-        {   //Remove them both
+        if(typeid(*(colliding_items[i])) == typeid(Enemy))
+        {   //Increase the score
+            game->score->IncreaseScore();
+            //Remove them both
             scene()->removeItem(colliding_items[i]);
             scene()->removeItem(this);
             //Delete them both
             delete colliding_items[i];
             delete this;
+            //All code below refers to a non existint bullet
             return;
         }
     }

@@ -1,7 +1,9 @@
 enemy.o
+evaded.o
 game.o
 main.o
 player.o
+score.o
 shot.o
 qrc_res.o
 moc_enemy.o

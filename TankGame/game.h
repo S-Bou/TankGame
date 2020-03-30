@@ -6,7 +6,9 @@
 #include <QObject>
 #include "player.h"
 #include "enemy.h"
+#include "score.h"
 #include <QTimer>
+#include "evaded.h"
 
 class Game : public QGraphicsView
 {
@@ -17,6 +19,8 @@ private:
 
 public:
     Game(QWidget *parent=nullptr);
+    Score *score;
+    Evaded *evaded;
 
 };
 

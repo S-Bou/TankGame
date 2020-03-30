@@ -4,7 +4,6 @@
 #include <QGraphicsScene>
 #include <stdlib.h>
 #include <QTimer>
-
 #include <QObject>
 #include <QDebug>
 

@@ -19,14 +19,18 @@ Game::Game(QWidget *parent)
     player->setFocus();
     scene->addItem(player);
 
+    //Create score and evaded data
+    score = new Score();
+    scene->addItem(score);
+    evaded = new Evaded();
+    evaded->setPos(evaded->x(), evaded->y()+25);
+    scene->addItem(evaded);
+
     //Create enemies
     player->spawnEnemy();
-
     QTimer *timer = new QTimer();
     connect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
     timer->start(2000);
-
-    //show();
 }
 
 
