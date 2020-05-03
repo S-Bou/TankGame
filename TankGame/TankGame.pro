@@ -19,18 +19,24 @@ SOURCES += \
     enemy.cpp \
     evaded.cpp \
     game.cpp \
+    losewintext.cpp \
     main.cpp \
+    mainwindow.cpp \
     player.cpp \
     score.cpp \
-    shot.cpp
+    shot.cpp \
+    windowstart.cpp
 
 HEADERS += \
     enemy.h \
     evaded.h \
     game.h \
+    losewintext.h \
+    mainwindow.h \
     player.h \
     score.h \
-    shot.h
+    shot.h \
+    windowstart.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -39,3 +45,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res.qrc
+
+FORMS += \
+    mainwindow.ui \
+    mainwindow.ui \
+    windowstart.ui

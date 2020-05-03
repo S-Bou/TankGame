@@ -1,8 +1,11 @@
 #include "game.h"
 
-Game::Game(QWidget *parent)
+extern WindowStart *s;
+
+Game::Game(QWidget *parent) : QGraphicsView(parent)
 {
-    (void) parent;
+    timer = new QTimer();
+
     //Create scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
@@ -26,11 +29,42 @@ Game::Game(QWidget *parent)
     evaded->setPos(evaded->x(), evaded->y()+25);
     scene->addItem(evaded);
 
-    //Create enemies
+    //Create text for wen lose
+    lose = new LoseWinText();
+}
+
+Game::~Game()
+{
+    delete timer;
+    delete scene;
+    delete score;
+    delete player;
+    delete evaded;
+}
+
+void Game::StartGame(void)
+{
+    //Create enemies when user push start
     player->spawnEnemy();
-    QTimer *timer = new QTimer();
+
+    //timer = new QTimer();
     connect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
     timer->start(2000);
+}
+
+void Game::ResetGame()
+{
+    //If evade 4 or more enemies show init window
+    disconnect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
+    lose->ShowLose();
+    scene->addItem(lose);
+    s->show();
+}
+
+void Game::ResetLevels()
+{
+    evaded->ResetLives();
+    scene->removeItem(lose);
 }
 
 

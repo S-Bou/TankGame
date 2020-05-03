@@ -8,9 +8,14 @@ Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
     direccion = jugador->getRotacion();
     setPixmap(QPixmap(":/images/shot.png"));
 
-    QTimer *timer = new QTimer();
+    timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(moveShotPlayer()));
     timer->start(50);
+}
+
+Shot::~Shot()
+{
+    //delete timer;
 }
 
 void Shot::moveShotPlayer()
@@ -38,21 +43,25 @@ void Shot::moveShotPlayer()
     {
         scene()->removeItem(this);
         delete this;
+        return;
     }
     else if(pos().x()+10 < 0)
     {
         scene()->removeItem(this);
         delete this;
+        return;
     }
     else if(pos().y()+10 > 600)
     {
         scene()->removeItem(this);
         delete this;
+        return;
     }
     else if(pos().x()+10 > 800)
     {
         scene()->removeItem(this);
         delete this;
+        return;
     }
 
     //When shot collides with enemy destroy both

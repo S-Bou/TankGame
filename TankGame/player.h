@@ -17,10 +17,12 @@ private:
 public:
     Player(QGraphicsItem *parent=nullptr);
     void keyPressEvent(QKeyEvent *event);
+//    void keyReleaseEvent(QKeyEvent *event);
     void SetDireccionTank(int);
 
 public slots:
     int getRotacion(void);
     void spawnEnemy(void);
+    void DeleteEnemies(void);
 };
 #endif // PLAYER_H

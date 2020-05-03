@@ -1,12 +1,17 @@
 enemy.o
 evaded.o
 game.o
+losewintext.o
 main.o
+mainwindow.o
 player.o
 score.o
 shot.o
+windowstart.o
 qrc_res.o
 moc_enemy.o
 moc_game.o
+moc_mainwindow.o
 moc_player.o
 moc_shot.o
+moc_windowstart.o

@@ -12,8 +12,11 @@ class Enemy : public QObject, public QGraphicsPixmapItem
     Q_OBJECT
 private:
     int direccion;
+    QTimer *timer;
+
 public:
     Enemy();
+    ~Enemy();
 
 public slots:
     void moveEnemy();

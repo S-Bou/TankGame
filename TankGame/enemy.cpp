@@ -15,9 +15,14 @@ Enemy::Enemy(): QObject(), QGraphicsPixmapItem()
     setRotation(direccion);
     setPixmap(QPixmap(":/images/enemyTank.png"));
 
-    QTimer *timer = new QTimer();
+    timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(moveEnemy()));
     timer->start(200);
+}
+
+Enemy::~Enemy()
+{
+    //delete this;
 }
 
 void Enemy::moveEnemy()

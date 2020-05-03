@@ -16,3 +16,5 @@ void Score::IncreaseScore()
     setPlainText("Score: " + QString::number(score));
 }
 
+
+

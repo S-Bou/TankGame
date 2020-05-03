@@ -15,10 +15,12 @@ class Shot: public QObject, public QGraphicsPixmapItem
     Q_OBJECT
 private:
     Player *jugador;
+    QTimer *timer;
     int direccion;
 
 public:
     Shot(Player*);
+    ~Shot();
 
 public slots:
     void moveShotPlayer();

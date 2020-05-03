@@ -1,19 +1,38 @@
 #include "evaded.h"
+#include "game.h"
+
+extern Game *game;
 
 Evaded::Evaded(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
     //Initialize the score to 0
-    evaded = 5;
+    evaded = 4;
     //Draw the text
-    setPlainText("Score: " + QString::number(evaded));
+    setPlainText("Lives: " + QString::number(evaded));
     setDefaultTextColor(Qt::yellow);
     setFont(QFont("times", 24));
 }
 
 void Evaded::DecreaseEvaded()
 {
-    if(evaded == 0){evaded = 5;}
-    evaded--;
-    setPlainText("Score: " + QString::number(evaded));
+    //If evade 4 or more enemies
+    if(evaded <= 0)
+    {
+        //qDebug() << "Se han evadido 4";
+        evaded = 0;
+        setPlainText("Lives: " + QString::number(evaded));
+        game->ResetGame();
+    }
+    else
+    {
+        evaded--;
+        setPlainText("Lives: " + QString::number(evaded));
+    }
+}
+
+void Evaded::ResetLives()
+{
+    evaded = 4;
+    setPlainText("Lives: " + QString::number(evaded));
 }
 

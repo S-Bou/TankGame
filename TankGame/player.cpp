@@ -28,6 +28,7 @@ void Player::keyPressEvent(QKeyEvent *event)
            pos().x()+100 <= 800 && pos().y()+100 <= 600)
            SetDireccionTank(rotacion);
 
+        //Para que no se salga de la vista
         if(pos().x() <= 0)setPos(x()+10, y());
         if(pos().x()+100 >= 800)setPos(x()-10, y());
         if(pos().y() <= 0)setPos(x(), y()+10);
@@ -36,15 +37,21 @@ void Player::keyPressEvent(QKeyEvent *event)
     }
     else if(event->key() == Qt::Key_S)
     {
-        if(pos().y()+100 < 600 && pos().x()+100 < 600)
+        if(pos().y()+100 <= 600 && pos().x()+100 <= 800)
         SetDireccionTank(rotacion-180);
+
+        //Para que no se salga de la vista
+        if(pos().x() <= 0)setPos(x()+10, y());
+        if(pos().x()+100 >= 800)setPos(x()-10, y());
+        if(pos().y() <= 0)setPos(x(), y()+10);
+        if(pos().y()+100 >= 600)setPos(x(), y()-10);
     }
     else if(event->key() == Qt::Key_Space)
     {
         Shot *shot = new Shot(this);
         shot->setPos(x()+40, y()+40);
         scene()->addItem(shot);
-    }
+  }
 }
 
 void Player::SetDireccionTank(int direccion)
@@ -72,6 +79,12 @@ void Player::spawnEnemy(void)
 {
     enemy = new Enemy();
     scene()->addItem(enemy);
+}
+
+void Player::DeleteEnemies()
+{
+    //delete enemy;
+    enemy->hide();
 }
 
 int Player::getRotacion(void)
