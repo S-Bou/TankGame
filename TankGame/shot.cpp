@@ -18,7 +18,7 @@ Shot::~Shot()
 
 }
 
-void Shot::moveShotPlayer()
+void Shot::moveShotPlayer(void)
 {
     if     (direccion ==    0){setPos(x()   , y()-10);}
     else if(direccion ==  -45){setPos(x()-10, y()-10);}
@@ -85,7 +85,7 @@ void Shot::moveShotPlayer()
 
 }
 
-void Shot::StopShot()
+void Shot::StopShot(void)
 {
     disconnect(timer, SIGNAL(timeout()), this, SLOT(moveShotPlayer()));
 }

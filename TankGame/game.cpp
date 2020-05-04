@@ -74,7 +74,10 @@ void Game::ResetGameWin()
 void Game::ResetLevels()
 {
     evaded->ResetLives();
+    score->ResetScore();
     scene->removeItem(losewin);
+    //Shot *shot = new Shot(nullptr);
+    //shot->StopShot();
 }
 
 

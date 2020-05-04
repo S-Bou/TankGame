@@ -24,8 +24,7 @@ public:
     ~Shot();
 
 public slots:
-    void moveShotPlayer();
-
+    void moveShotPlayer(void);
 
 };
 

@@ -22,3 +22,4 @@ void WindowStart::on_pushButton_clicked()
     game->ResetLevels();
     close();
 }
+

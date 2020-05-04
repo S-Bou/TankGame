@@ -15,11 +15,10 @@ Score::Score(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 
 void Score::IncreaseScore()
 {
-    if(score >= 9)
+    if(score >= 10)
     {
         qDebug() << "10 enemigos destruidos";
-        score = 0;
-        setPlainText("Score: " + QString::number(score));
+
         game->ResetGameWin();
     }
     else
@@ -27,6 +26,12 @@ void Score::IncreaseScore()
         score++;
         setPlainText("Score: " + QString::number(score));
     }
+}
+
+void Score::ResetScore()
+{
+    score = 0;
+    setPlainText("Score: " + QString::number(score));
 }
 
 

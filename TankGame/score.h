@@ -9,7 +9,7 @@ class Score : public QGraphicsTextItem
 public:
     Score(QGraphicsItem *parent=nullptr);
     void IncreaseScore(void);
-
+    void ResetScore(void);
 private:
     int score;
 };
