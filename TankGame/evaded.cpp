@@ -21,7 +21,7 @@ void Evaded::DecreaseEvaded()
         //qDebug() << "Se han evadido 4";
         evaded = 0;
         setPlainText("Lives: " + QString::number(evaded));
-        game->ResetGame();
+        game->ResetGameLose();
     }
     else
     {

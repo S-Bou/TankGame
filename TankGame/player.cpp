@@ -37,8 +37,9 @@ void Player::keyPressEvent(QKeyEvent *event)
     }
     else if(event->key() == Qt::Key_S)
     {
-        if(pos().y()+100 <= 600 && pos().x()+100 <= 800)
-        SetDireccionTank(rotacion-180);
+        if(pos().x() >= 0       && pos().y() >= 0 &&
+           pos().x()+100 <= 800 && pos().y()+100 <= 600)
+           SetDireccionTank(rotacion-180);
 
         //Para que no se salga de la vista
         if(pos().x() <= 0)setPos(x()+10, y());

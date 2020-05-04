@@ -7,6 +7,7 @@
 #include "player.h"
 #include "enemy.h"
 #include "score.h"
+#include "shot.h"
 #include <QTimer>
 #include "evaded.h"
 #include "mainwindow.h"
@@ -18,7 +19,7 @@ class Game : public QGraphicsView
     Q_OBJECT
 private:
     QGraphicsScene *scene;
-    LoseWinText *lose;
+    LoseWinText *losewin;
     QTimer *timer;
     Player *player;
 
@@ -26,7 +27,8 @@ public:
     Game(QWidget *parent=nullptr);
     ~Game();
     void StartGame(void);
-    void ResetGame(void);
+    void ResetGameLose(void);
+    void ResetGameWin(void);
     void ResetLevels(void);
     Score *score;
     Evaded *evaded;

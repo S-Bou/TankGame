@@ -13,7 +13,10 @@ void LoseWinText::ShowLose()
     setPos(280, 20);
 }
 
-void LoseWinText::HideLose()
+void LoseWinText::ShowWin()
 {
-
+    setPlainText("YOU WIN");
+    setDefaultTextColor(Qt::green);
+    setFont(QFont("times", 36, 75, false));
+    setPos(280, 20);
 }

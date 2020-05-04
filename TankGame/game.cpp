@@ -30,7 +30,7 @@ Game::Game(QWidget *parent) : QGraphicsView(parent)
     scene->addItem(evaded);
 
     //Create text for wen lose
-    lose = new LoseWinText();
+    losewin = new LoseWinText();
 }
 
 Game::~Game()
@@ -52,19 +52,29 @@ void Game::StartGame(void)
     timer->start(2000);
 }
 
-void Game::ResetGame()
+void Game::ResetGameLose()
 {
     //If evade 4 or more enemies show init window
     disconnect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
-    lose->ShowLose();
-    scene->addItem(lose);
+    losewin->ShowLose();
+    scene->addItem(losewin);
     s->show();
+}
+
+void Game::ResetGameWin()
+{
+    //If destroy 10 or more enemies show init window
+    disconnect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
+    losewin->ShowWin();
+    scene->addItem(losewin);
+    s->show();
+
 }
 
 void Game::ResetLevels()
 {
     evaded->ResetLives();
-    scene->removeItem(lose);
+    scene->removeItem(losewin);
 }
 
 

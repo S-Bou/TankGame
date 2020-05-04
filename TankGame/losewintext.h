@@ -9,7 +9,7 @@ class LoseWinText : public QGraphicsTextItem
 public:
     LoseWinText(QGraphicsItem *parent = nullptr);
     void ShowLose(void);
-    void HideLose(void);
+    void ShowWin(void);
 
 signals:
 

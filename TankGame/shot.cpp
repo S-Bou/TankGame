@@ -15,7 +15,7 @@ Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
 
 Shot::~Shot()
 {
-    //delete timer;
+
 }
 
 void Shot::moveShotPlayer()
@@ -83,6 +83,11 @@ void Shot::moveShotPlayer()
     }
 
 
+}
+
+void Shot::StopShot()
+{
+    disconnect(timer, SIGNAL(timeout()), this, SLOT(moveShotPlayer()));
 }
 
 

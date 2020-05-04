@@ -19,11 +19,13 @@ private:
     int direccion;
 
 public:
+        void StopShot(void);
     Shot(Player*);
     ~Shot();
 
 public slots:
     void moveShotPlayer();
+
 
 };
 

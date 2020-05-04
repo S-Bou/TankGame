@@ -1,4 +1,7 @@
 #include "score.h"
+#include "game.h"
+
+extern Game *game;
 
 Score::Score(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
@@ -12,8 +15,18 @@ Score::Score(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 
 void Score::IncreaseScore()
 {
-    score++;
-    setPlainText("Score: " + QString::number(score));
+    if(score >= 9)
+    {
+        qDebug() << "10 enemigos destruidos";
+        score = 0;
+        setPlainText("Score: " + QString::number(score));
+        game->ResetGameWin();
+    }
+    else
+    {
+        score++;
+        setPlainText("Score: " + QString::number(score));
+    }
 }
 
 
