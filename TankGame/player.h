@@ -2,6 +2,7 @@
 #define PLAYER_H
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
+#include <QMediaPlayer>
 #include <QKeyEvent>
 #include "enemy.h"
 #include <QPoint>
@@ -13,6 +14,7 @@ class Player: public QObject, public QGraphicsPixmapItem
 private:
     int rotacion;
     Enemy *enemy;
+    QMediaPlayer *bulletsound;
 
 public:
     Player(QGraphicsItem *parent=nullptr);

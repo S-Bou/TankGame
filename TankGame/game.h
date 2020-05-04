@@ -13,6 +13,8 @@
 #include "mainwindow.h"
 #include "windowstart.h"
 #include "losewintext.h"
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
 
 class Game : public QGraphicsView
 {

@@ -7,4 +7,8 @@
         <file>CamouflagePattern.png</file>
         <file>greencamouflage.jpg</file>
     </qresource>
+    <qresource prefix="/sounds">
+        <file>Disparo.mp3</file>
+        <file>MusicBackg.mp3</file>
+    </qresource>
 </RCC>

@@ -31,6 +31,15 @@ Game::Game(QWidget *parent) : QGraphicsView(parent)
 
     //Create text for wen lose
     losewin = new LoseWinText();
+
+    //Play background music
+    QMediaPlaylist *playlist = new QMediaPlaylist();
+    playlist->addMedia(QUrl("qrc:/sounds/MusicBackg.mp3"));
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+    QMediaPlayer *music = new QMediaPlayer();
+    music->setPlaylist(playlist);
+    music->play();
 }
 
 Game::~Game()

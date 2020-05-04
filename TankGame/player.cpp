@@ -6,6 +6,9 @@ Player::Player(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
     setPixmap(QPixmap(":/images/playerTank.png"));
     setTransformOriginPoint(50, 50);
     rotacion = 0;
+
+    bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl("qrc:/sounds/Disparo.mp3"));
 }
 
 void Player::keyPressEvent(QKeyEvent *event)
@@ -52,6 +55,12 @@ void Player::keyPressEvent(QKeyEvent *event)
         Shot *shot = new Shot(this);
         shot->setPos(x()+40, y()+40);
         scene()->addItem(shot);
+
+        //Play bullet sound
+        if(bulletsound->state() == QMediaPlayer::PlayingState)
+        {bulletsound->setPosition(0);}
+        else if(bulletsound->state() == QMediaPlayer::StoppedState)
+        {bulletsound->play();}
   }
 }
 
