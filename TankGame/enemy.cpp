@@ -4,17 +4,29 @@
 
 extern Game *game;
 
+int Enemy::RandomHandler(int lowest, int highest)
+{
+    uint aux = (int)QDateTime::currentDateTimeUtc().toMSecsSinceEpoch();
+    qsrand(aux);
+    return (qrand() % (highest - lowest)) + lowest;
+}
+
 Enemy::Enemy(): QObject(), QGraphicsPixmapItem()
 {
-    int PosX =  rand() % 600 + 100;
-    int PosY =  rand() % 400 + 100;
+    //Define with random position where spawn enemy
+    int PosX =  RandomHandler(100, 600);
+    int PosY =  RandomHandler(100, 400);
+    //qDebug() << PosX << ", " << PosY;
     setPos(PosX,PosY);
     int dir[] = {0, -45, -90, -135, -180, -225, -270, -315, -360,
                      45,  90,  135,  180,  225,  270,  315,  360};
-    direccion = dir[rand() % 16];
+    //Define with random direction of enemy
+    direccion = dir[qrand() % 16];
+
     setRotation(direccion);
     setPixmap(QPixmap(":/images/enemyTank.png"));
 
+    //Timer that define time between spawns
     timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(moveEnemy()));
     timer->start(200);
