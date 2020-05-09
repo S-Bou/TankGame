@@ -4,7 +4,6 @@
 #include <QGraphicsScene>
 #include <QRandomGenerator>
 #include <QDateTime>
-
 #include <QTimer>
 #include <QObject>
 #include <QDebug>

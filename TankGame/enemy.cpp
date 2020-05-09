@@ -4,13 +4,6 @@
 
 extern Game *game;
 
-int Enemy::RandomHandler(int lowest, int highest)
-{
-    uint aux = (int)QDateTime::currentDateTimeUtc().toMSecsSinceEpoch();
-    qsrand(aux);
-    return (qrand() % (highest - lowest)) + lowest;
-}
-
 Enemy::Enemy(): QObject(), QGraphicsPixmapItem()
 {
     //Define with random position where spawn enemy
@@ -30,6 +23,13 @@ Enemy::Enemy(): QObject(), QGraphicsPixmapItem()
     timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(moveEnemy()));
     timer->start(200);
+}
+
+int Enemy::RandomHandler(int lowest, int highest)
+{
+    uint aux = (int)QDateTime::currentDateTimeUtc().toMSecsSinceEpoch();
+    qsrand(aux);
+    return (qrand() % (highest - lowest)) + lowest;
 }
 
 Enemy::~Enemy()
