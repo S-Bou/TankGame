@@ -36,7 +36,7 @@ Game::Game(QWidget *parent) : QGraphicsView(parent)
     QMediaPlaylist *playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl("qrc:/sounds/MusicBackg.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
-
+    //Play background music as loop
     QMediaPlayer *music = new QMediaPlayer();
     music->setPlaylist(playlist);
     music->play();
