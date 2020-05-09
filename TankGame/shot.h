@@ -14,12 +14,13 @@ class Shot: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 private:
+    QMediaPlayer *soundHit;
     Player *jugador;
     QTimer *timer;
     int direccion;
 
 public:
-        void StopShot(void);
+    void StopShot(void);
     Shot(Player*);
     ~Shot();
 

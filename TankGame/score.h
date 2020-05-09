@@ -2,6 +2,7 @@
 #define SCORE_H
 
 #include <QGraphicsTextItem>
+#include <QMediaPlayer>
 #include <QFont>
 
 class Score : public QGraphicsTextItem
@@ -11,8 +12,10 @@ public:
     void IncreaseScore(void);
     void ResetScore(void);
     int getScore() const;
+    void SoundWin(void);
 
 private:
+    QMediaPlayer *soundWin;
     int score;
 };
 

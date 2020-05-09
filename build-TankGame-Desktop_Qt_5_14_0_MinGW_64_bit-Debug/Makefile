@@ -293,6 +293,7 @@ Makefile: ../TankGame/TankGame.pro C:/Qt/5.14.0/mingw73_64/mkspecs/win32-g++/qma
 		C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt_config.prf \
 		C:/Qt/5.14.0/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		C:/Qt/5.14.0/mingw73_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		C:/Qt/5.14.0/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		C:/Qt/5.14.0/mingw73_64/mkspecs/features/toolchain.prf \
 		C:/Qt/5.14.0/mingw73_64/mkspecs/features/default_pre.prf \
@@ -500,6 +501,7 @@ C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt_functions.prf:
 C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt_config.prf:
 C:/Qt/5.14.0/mingw73_64/mkspecs/win32-g++/qmake.conf:
 C:/Qt/5.14.0/mingw73_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 C:/Qt/5.14.0/mingw73_64/mkspecs/features/exclusive_builds.prf:
 C:/Qt/5.14.0/mingw73_64/mkspecs/features/toolchain.prf:
 C:/Qt/5.14.0/mingw73_64/mkspecs/features/default_pre.prf:
@@ -535,7 +537,7 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) TankGame.zip $(SOURCES) $(DIST) ../TankGame/TankGame.pro C:/Qt/5.14.0/mingw73_64/mkspecs/features/spec_pre.prf C:/Qt/5.14.0/mingw73_64/mkspecs/qdevice.pri C:/Qt/5.14.0/mingw73_64/mkspecs/features/device_config.prf C:/Qt/5.14.0/mingw73_64/mkspecs/common/sanitize.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/gcc-base.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/g++-base.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/angle.conf C:/Qt/5.14.0/mingw73_64/mkspecs/features/win32/windows_vulkan_sdk.prf C:/Qt/5.14.0/mingw73_64/mkspecs/common/windows-vulkan.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/g++-win32.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/windows-desktop.conf C:/Qt/5.14.0/mingw73_64/mkspecs/qconfig.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3danimation.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3danimation_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dcore.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dcore_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dextras.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dextras_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dinput.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dinput_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dlogic.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dlogic_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquick.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquick_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickanimation.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickextras.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickextras_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickinput.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickinput_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickrender.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickrender_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickscene2d.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3drender.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3drender_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_accessibility_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axbase.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axbase_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axcontainer.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axcontainer_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axserver.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axserver_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_bluetooth.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_bluetooth_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_bodymovin_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_bootstrap_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_charts.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_charts_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_concurrent.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_concurrent_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_core.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_core_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_datavisualization.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_datavisualization_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_dbus.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_dbus_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_designer.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_designer_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_designercomponents_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_edid_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_egl_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_fb_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_gamepad.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_gamepad_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_gui.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_gui_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_help.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_help_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_location.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_location_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_multimedia.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_multimedia_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_multimediawidgets.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_network.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_network_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_networkauth.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_networkauth_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_nfc.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_nfc_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_opengl.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_opengl_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_openglextensions.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_openglextensions_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_packetprotocol_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_positioning.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_positioning_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_positioningquick.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_positioningquick_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_printsupport.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_printsupport_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_purchasing.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_purchasing_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qml.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qml_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmldebug_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmldevtools_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmlmodels.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmlmodels_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmltest.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmltest_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmlworkerscript.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmlworkerscript_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3d.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3d_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3dassetimport.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3dassetimport_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3drender.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3drender_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3druntimerender.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3druntimerender_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3dutils.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3dutils_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickcontrols2.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickparticles_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickshapes_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quicktemplates2.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickwidgets.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickwidgets_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_remoteobjects.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_remoteobjects_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_repparser.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_repparser_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_script.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_script_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_scripttools.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_scripttools_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_scxml.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_scxml_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_sensors.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_sensors_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_serialbus.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_serialbus_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_serialport.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_serialport_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_sql.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_sql_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_svg.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_svg_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_testlib.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_testlib_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_texttospeech.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_texttospeech_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_theme_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_uiplugin.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_uitools.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_uitools_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_virtualkeyboard.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_vulkan_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_webchannel.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_webchannel_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_websockets.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_websockets_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_widgets.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_widgets_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_windowsuiautomation_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_winextras.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_winextras_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_xml.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_xml_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_xmlpatterns.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt_functions.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt_config.prf C:/Qt/5.14.0/mingw73_64/mkspecs/win32-g++/qmake.conf C:/Qt/5.14.0/mingw73_64/mkspecs/features/spec_post.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/exclusive_builds.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/toolchain.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/default_pre.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/win32/default_pre.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/resolve_config.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/default_post.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/precompile_header.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/warn_on.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/resources_functions.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/resources.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/moc.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/win32/opengl.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/uic.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/qmake_use.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/file_copies.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/win32/windows.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/testcase_targets.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/exceptions.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/yacc.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/lex.prf ../TankGame/TankGame.pro ../TankGame/res.qrc C:/Qt/5.14.0/mingw73_64/lib/Qt5Multimedia.prl C:/Qt/5.14.0/mingw73_64/lib/Qt5Widgets.prl C:/Qt/5.14.0/mingw73_64/lib/Qt5Gui.prl C:/Qt/5.14.0/mingw73_64/lib/Qt5Network.prl C:/Qt/5.14.0/mingw73_64/lib/Qt5Core.prl C:/Qt/5.14.0/mingw73_64/lib/qtmain.prl   ../TankGame/res.qrc C:/Qt/5.14.0/mingw73_64/mkspecs/features/data/dummy.cpp ../TankGame/enemy.h ../TankGame/evaded.h ../TankGame/game.h ../TankGame/losewintext.h ../TankGame/mainwindow.h ../TankGame/player.h ../TankGame/score.h ../TankGame/shot.h ../TankGame/windowstart.h  ../TankGame/enemy.cpp ../TankGame/evaded.cpp ../TankGame/game.cpp ../TankGame/losewintext.cpp ../TankGame/main.cpp ../TankGame/mainwindow.cpp ../TankGame/player.cpp ../TankGame/score.cpp ../TankGame/shot.cpp ../TankGame/windowstart.cpp ../TankGame/mainwindow.ui ../TankGame/mainwindow.ui ../TankGame/windowstart.ui    
+	$(ZIP) TankGame.zip $(SOURCES) $(DIST) ../TankGame/TankGame.pro C:/Qt/5.14.0/mingw73_64/mkspecs/features/spec_pre.prf C:/Qt/5.14.0/mingw73_64/mkspecs/qdevice.pri C:/Qt/5.14.0/mingw73_64/mkspecs/features/device_config.prf C:/Qt/5.14.0/mingw73_64/mkspecs/common/sanitize.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/gcc-base.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/g++-base.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/angle.conf C:/Qt/5.14.0/mingw73_64/mkspecs/features/win32/windows_vulkan_sdk.prf C:/Qt/5.14.0/mingw73_64/mkspecs/common/windows-vulkan.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/g++-win32.conf C:/Qt/5.14.0/mingw73_64/mkspecs/common/windows-desktop.conf C:/Qt/5.14.0/mingw73_64/mkspecs/qconfig.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3danimation.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3danimation_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dcore.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dcore_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dextras.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dextras_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dinput.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dinput_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dlogic.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dlogic_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquick.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquick_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickanimation.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickextras.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickextras_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickinput.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickinput_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickrender.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickrender_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickscene2d.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3drender.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_3drender_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_accessibility_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axbase.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axbase_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axcontainer.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axcontainer_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axserver.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_axserver_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_bluetooth.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_bluetooth_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_bodymovin_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_bootstrap_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_charts.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_charts_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_concurrent.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_concurrent_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_core.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_core_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_datavisualization.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_datavisualization_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_dbus.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_dbus_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_designer.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_designer_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_designercomponents_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_edid_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_egl_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_fb_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_gamepad.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_gamepad_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_gui.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_gui_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_help.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_help_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_location.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_location_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_multimedia.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_multimedia_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_multimediawidgets.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_network.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_network_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_networkauth.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_networkauth_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_nfc.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_nfc_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_opengl.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_opengl_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_openglextensions.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_openglextensions_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_packetprotocol_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_positioning.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_positioning_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_positioningquick.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_positioningquick_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_printsupport.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_printsupport_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_purchasing.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_purchasing_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qml.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qml_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmldebug_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmldevtools_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmlmodels.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmlmodels_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmltest.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmltest_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmlworkerscript.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qmlworkerscript_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3d.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3d_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3dassetimport.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3dassetimport_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3drender.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3drender_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3druntimerender.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3druntimerender_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3dutils.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick3dutils_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quick_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickcontrols2.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickparticles_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickshapes_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quicktemplates2.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickwidgets.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_quickwidgets_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_remoteobjects.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_remoteobjects_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_repparser.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_repparser_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_script.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_script_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_scripttools.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_scripttools_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_scxml.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_scxml_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_sensors.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_sensors_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_serialbus.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_serialbus_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_serialport.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_serialport_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_sql.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_sql_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_svg.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_svg_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_testlib.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_testlib_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_texttospeech.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_texttospeech_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_theme_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_uiplugin.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_uitools.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_uitools_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_virtualkeyboard.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_vulkan_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_webchannel.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_webchannel_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_websockets.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_websockets_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_widgets.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_widgets_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_windowsuiautomation_support_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_winextras.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_winextras_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_xml.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_xml_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_xmlpatterns.pri C:/Qt/5.14.0/mingw73_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt_functions.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt_config.prf C:/Qt/5.14.0/mingw73_64/mkspecs/win32-g++/qmake.conf C:/Qt/5.14.0/mingw73_64/mkspecs/features/spec_post.prf .qmake.stash C:/Qt/5.14.0/mingw73_64/mkspecs/features/exclusive_builds.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/toolchain.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/default_pre.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/win32/default_pre.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/resolve_config.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/default_post.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/precompile_header.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/warn_on.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/qt.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/resources_functions.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/resources.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/moc.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/win32/opengl.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/uic.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/qmake_use.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/file_copies.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/win32/windows.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/testcase_targets.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/exceptions.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/yacc.prf C:/Qt/5.14.0/mingw73_64/mkspecs/features/lex.prf ../TankGame/TankGame.pro ../TankGame/res.qrc C:/Qt/5.14.0/mingw73_64/lib/Qt5Multimedia.prl C:/Qt/5.14.0/mingw73_64/lib/Qt5Widgets.prl C:/Qt/5.14.0/mingw73_64/lib/Qt5Gui.prl C:/Qt/5.14.0/mingw73_64/lib/Qt5Network.prl C:/Qt/5.14.0/mingw73_64/lib/Qt5Core.prl C:/Qt/5.14.0/mingw73_64/lib/qtmain.prl   ../TankGame/res.qrc C:/Qt/5.14.0/mingw73_64/mkspecs/features/data/dummy.cpp ../TankGame/enemy.h ../TankGame/evaded.h ../TankGame/game.h ../TankGame/losewintext.h ../TankGame/mainwindow.h ../TankGame/player.h ../TankGame/score.h ../TankGame/shot.h ../TankGame/windowstart.h  ../TankGame/enemy.cpp ../TankGame/evaded.cpp ../TankGame/game.cpp ../TankGame/losewintext.cpp ../TankGame/main.cpp ../TankGame/mainwindow.cpp ../TankGame/player.cpp ../TankGame/score.cpp ../TankGame/shot.cpp ../TankGame/windowstart.cpp ../TankGame/mainwindow.ui ../TankGame/mainwindow.ui ../TankGame/windowstart.ui    
 
 clean: compiler_clean 
 	-$(DEL_FILE) enemy.o evaded.o game.o losewintext.o main.o mainwindow.o player.o score.o shot.o windowstart.o qrc_res.o moc_enemy.o moc_game.o moc_mainwindow.o moc_player.o moc_shot.o moc_windowstart.o
@@ -567,7 +569,10 @@ qrc_res.cpp: ../TankGame/res.qrc \
 		../TankGame/playerTank.png \
 		../TankGame/greencamouflage.jpg \
 		../TankGame/Disparo.mp3 \
-		../TankGame/MusicBackg.mp3
+		../TankGame/hitSound.wav \
+		../TankGame/winSound.wav \
+		../TankGame/MusicBackg.mp3 \
+		../TankGame/loseSound.wav
 	'C:\Qt\5.14.0\mingw73_64\bin\rcc.exe' -name res ../TankGame/res.qrc -o qrc_res.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -956,23 +961,6 @@ moc_mainwindow.cpp: ../TankGame/mainwindow.h \
 		../TankGame/evaded.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QDialog \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qdialog.h \
-		../TankGame/game.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsView \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpainter.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
-		../TankGame/player.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
@@ -992,6 +980,23 @@ moc_mainwindow.cpp: ../TankGame/mainwindow.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QDialog \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qdialog.h \
+		../TankGame/game.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsView \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpainter.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qscrollarea.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
+		../TankGame/player.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QKeyEvent \
 		../TankGame/enemy.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
@@ -1417,6 +1422,25 @@ moc_windowstart.cpp: ../TankGame/windowstart.h \
 		../TankGame/evaded.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
 		moc_predefs.h \
 		C:/Qt/5.14.0/mingw73_64/bin/moc.exe
@@ -1704,6 +1728,27 @@ evaded.o: ../TankGame/evaded.cpp ../TankGame/evaded.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qfont.h \
 		../TankGame/game.h \
@@ -1724,8 +1769,6 @@ evaded.o: ../TankGame/evaded.cpp ../TankGame/evaded.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qvector2d.h \
@@ -1736,25 +1779,6 @@ evaded.o: ../TankGame/evaded.cpp ../TankGame/evaded.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
 		../TankGame/player.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmultimedia.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediacontent.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaresource.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkrequest.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetwork-config.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QSharedDataPointer \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QString \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QUrl \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QKeyEvent \
 		../TankGame/enemy.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
@@ -2146,23 +2170,6 @@ main.o: ../TankGame/main.cpp C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QApplicat
 		../TankGame/evaded.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QDialog \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qdialog.h \
-		../TankGame/game.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsView \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpainter.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
-		../TankGame/player.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
@@ -2182,6 +2189,23 @@ main.o: ../TankGame/main.cpp C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QApplicat
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QDialog \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qdialog.h \
+		../TankGame/game.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsView \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpainter.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qscrollarea.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
+		../TankGame/player.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QKeyEvent \
 		../TankGame/enemy.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
@@ -2307,23 +2331,6 @@ mainwindow.o: ../TankGame/mainwindow.cpp ../TankGame/mainwindow.h \
 		../TankGame/evaded.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QDialog \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qdialog.h \
-		../TankGame/game.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsView \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpainter.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
-		../TankGame/player.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
@@ -2343,6 +2350,23 @@ mainwindow.o: ../TankGame/mainwindow.cpp ../TankGame/mainwindow.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QDialog \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qdialog.h \
+		../TankGame/game.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsView \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpainter.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qscrollarea.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
+		../TankGame/player.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QKeyEvent \
 		../TankGame/enemy.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
@@ -2357,7 +2381,16 @@ mainwindow.o: ../TankGame/mainwindow.cpp ../TankGame/mainwindow.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlaylist \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplaylist.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediabindableinterface.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QApplication \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QLabel \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../TankGame/mainwindow.cpp
 
 player.o: ../TankGame/player.cpp ../TankGame/player.h \
@@ -2611,6 +2644,27 @@ score.o: ../TankGame/score.cpp ../TankGame/score.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qfont.h \
 		../TankGame/game.h \
@@ -2631,8 +2685,6 @@ score.o: ../TankGame/score.cpp ../TankGame/score.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/qvector2d.h \
@@ -2643,25 +2695,6 @@ score.o: ../TankGame/score.cpp ../TankGame/score.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
 		../TankGame/player.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmultimedia.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediacontent.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaresource.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkrequest.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qtnetwork-config.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QSharedDataPointer \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QString \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QUrl \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QKeyEvent \
 		../TankGame/enemy.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \
@@ -2951,22 +2984,6 @@ windowstart.o: ../TankGame/windowstart.cpp ../TankGame/windowstart.h \
 		../TankGame/evaded.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
-		ui_windowstart.h \
-		../TankGame/game.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsView \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpainter.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
-		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
-		../TankGame/player.h \
-		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
@@ -2986,6 +3003,37 @@ windowstart.o: ../TankGame/windowstart.cpp ../TankGame/windowstart.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/qmetaobject.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtMultimedia/qaudio.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/QFont \
+		ui_windowstart.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QApplication \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QCheckBox \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qicon.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsView \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpainter.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qscrollarea.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QLabel \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qlabel.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QPushButton \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/qpushbutton.h \
+		../TankGame/game.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.0/mingw73_64/include/QtCore/QObject \
+		../TankGame/player.h \
+		C:/Qt/5.14.0/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.0/mingw73_64/include/QtGui/QKeyEvent \
 		../TankGame/enemy.h \
 		C:/Qt/5.14.0/mingw73_64/include/QtCore/QTimer \

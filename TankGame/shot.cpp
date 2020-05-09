@@ -11,6 +11,10 @@ Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
     timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(moveShotPlayer()));
     timer->start(50);
+
+    //Confic sonund for when player hit
+    soundHit = new QMediaPlayer();
+    soundHit->setMedia(QUrl("qrc:/sounds/hitSound.wav"));
 }
 
 Shot::~Shot()
@@ -70,6 +74,8 @@ void Shot::moveShotPlayer(void)
     {
         if(typeid(*(colliding_items[i])) == typeid(Enemy))
         {
+            //Play sound hit
+            soundHit->play();
             //Increase the score
             game->score->IncreaseScore();
             //Remove them both
@@ -88,7 +94,7 @@ void Shot::moveShotPlayer(void)
 
 void Shot::StopShot(void)
 {
-    disconnect(timer, SIGNAL(timeout()), this, SLOT(moveShotPlayer()));
+    //disconnect(timer, SIGNAL(timeout()), this, SLOT(moveShotPlayer()));
 }
 
 

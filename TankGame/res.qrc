@@ -10,5 +10,8 @@
     <qresource prefix="/sounds">
         <file>Disparo.mp3</file>
         <file>MusicBackg.mp3</file>
+        <file>winSound.wav</file>
+        <file>loseSound.wav</file>
+        <file>hitSound.wav</file>
     </qresource>
 </RCC>

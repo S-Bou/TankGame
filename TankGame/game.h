@@ -22,10 +22,12 @@ class Game : public QGraphicsView
 private:
     QGraphicsScene *scene;
     LoseWinText *losewin;
-    QMediaPlayer *music;
+    QMediaPlaylist *playlist;
+    QMediaPlayer *music, *soundLose;
     QTimer *timer;
     QTimer *timerData;
     Player *player;
+    bool stateMusic;
 
 
 public:

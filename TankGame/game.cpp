@@ -30,10 +30,12 @@ Game::Game(QWidget *parent) : QGraphicsView(parent)
     //Create text for wen lose
     losewin = new LoseWinText();
 
-    //Play background music
-    QMediaPlaylist *playlist = new QMediaPlaylist();
+    //Play background music, config it as list for play as loop
+    playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl("qrc:/sounds/MusicBackg.mp3"));
-    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+    playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
+    playlist->setCurrentIndex(1);
+
     //Play background music as loop
     music = new QMediaPlayer();
     music->setPlaylist(playlist);
@@ -46,30 +48,31 @@ Game::Game(QWidget *parent) : QGraphicsView(parent)
     //Timer for check data constantly for determinade win or lose
     timerData = new QTimer();
     connect(timerData, SIGNAL(timeout()), this, SLOT(CheckScores()));
-    timerData->start(500);
 }
 
 Game::~Game()
 {
+    delete timerData;
     delete timer;
     delete scene;
     delete score;
     delete player;
     delete evaded;
+    delete music;
 }
 
 void Game::StartGame(void)
 {
     //Create enemies when user push start
     player->spawnEnemy();
-
-    //timer = new QTimer();
     timer->start(2000);
+    timerData->start(500);
 }
 
 void Game::ResetGameLose()
 {
     //If evade 4 or more enemies show init window
+    evaded->SoundLose();
     timer->stop();
     losewin->ShowLose();
     scene->addItem(losewin);
@@ -79,6 +82,7 @@ void Game::ResetGameLose()
 void Game::ResetGameWin()
 {
     //If destroy 10 or more enemies show init window
+    score->SoundWin();
     timer->stop();
     losewin->ShowWin();
     scene->addItem(losewin);
@@ -97,16 +101,20 @@ void Game::CheckScores(void)
     if(score->getScore() >= 10)
     {
         ResetGameWin();
+        timerData->stop();
     }
 
     if(evaded->getEvaded() <= 0)
     {
         ResetGameLose();
+        timerData->stop();
     }
 }
 
 void Game::StateMusic(bool state)
 {
+    stateMusic = state;
+
     if(!state)
     {
         music->stop();

@@ -11,6 +11,10 @@ Score::Score(QGraphicsItem *parent) : QGraphicsTextItem(parent)
     setPlainText("Score: " + QString::number(score));
     setDefaultTextColor(Qt::white);
     setFont(QFont("times", 24));
+
+    //Confic sonund for when player win
+    soundWin = new QMediaPlayer();
+    soundWin->setMedia(QUrl("qrc:/sounds/winSound.wav"));
 }
 
 void Score::IncreaseScore() //Setter
@@ -18,9 +22,7 @@ void Score::IncreaseScore() //Setter
     if(score >= 10)
     {
         //qDebug() << "10 enemigos destruidos";
-        //score = 10;
         setPlainText("Score: " + QString::number(10));
-        //game->ResetGameWin();
     }
     else
     {
@@ -38,6 +40,11 @@ void Score::ResetScore()
 int Score::getScore() const
 {
     return score;
+}
+
+void Score::SoundWin()
+{
+    soundWin->play();
 }
 
 
