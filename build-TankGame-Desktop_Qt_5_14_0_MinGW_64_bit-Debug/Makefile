@@ -564,10 +564,9 @@ qrc_res.cpp: ../TankGame/res.qrc \
 		C:/Qt/5.14.0/mingw73_64/bin/rcc.exe \
 		../TankGame/enemyTank.png \
 		../TankGame/grassTexture.jpg \
+		../TankGame/camugrease.jpg \
 		../TankGame/shot.png \
-		../TankGame/CamouflagePattern.png \
 		../TankGame/playerTank.png \
-		../TankGame/greencamouflage.jpg \
 		../TankGame/Disparo.mp3 \
 		../TankGame/hitSound.wav \
 		../TankGame/winSound.wav \

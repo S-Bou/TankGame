@@ -12,7 +12,7 @@ Score::Score(QGraphicsItem *parent) : QGraphicsTextItem(parent)
     setDefaultTextColor(Qt::white);
     setFont(QFont("times", 24));
 
-    //Confic sonund for when player win
+    //Config sonund for when player win
     soundWin = new QMediaPlayer();
     soundWin->setMedia(QUrl("qrc:/sounds/winSound.wav"));
 }

@@ -21,7 +21,6 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    //Game *game;
 };
 
 #endif // MAINWINDOW_H

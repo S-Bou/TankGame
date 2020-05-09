@@ -6,14 +6,10 @@
 
 class LoseWinText : public QGraphicsTextItem
 {
-private:
-
 public:
     LoseWinText(QGraphicsItem *parent = nullptr);
     void ShowLose(void);
     void ShowWin(void);
-
-signals:
 
 };
 

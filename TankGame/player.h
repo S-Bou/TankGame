@@ -19,7 +19,6 @@ private:
 public:
     Player(QGraphicsItem *parent=nullptr);
     void keyPressEvent(QKeyEvent *event);
-//    void keyReleaseEvent(QKeyEvent *event);
     void SetDireccionTank(int);
 
 public slots:

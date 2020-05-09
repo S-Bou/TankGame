@@ -12,7 +12,7 @@ Shot::Shot(Player *p): QObject(), QGraphicsPixmapItem()
     connect(timer, SIGNAL(timeout()), this, SLOT(moveShotPlayer()));
     timer->start(50);
 
-    //Confic sonund for when player hit
+    //Config sonund for when player hit
     soundHit = new QMediaPlayer();
     soundHit->setMedia(QUrl("qrc:/sounds/hitSound.wav"));
 }
@@ -74,7 +74,7 @@ void Shot::moveShotPlayer(void)
     {
         if(typeid(*(colliding_items[i])) == typeid(Enemy))
         {
-            //Play sound hit
+            //Play sound when hit enemy
             soundHit->play();
             //Increase the score
             game->score->IncreaseScore();

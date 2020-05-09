@@ -110,7 +110,7 @@ public:
         QPalette palette1;
         graphicsView->setPalette(palette1);
         graphicsView->setAutoFillBackground(true);
-        graphicsView->setStyleSheet(QString::fromUtf8("background-image: url(:/images/greencamouflage.jpg);"));
+        graphicsView->setStyleSheet(QString::fromUtf8("background-image: url(:/images/camugrease.jpg);"));
         checkBox = new QCheckBox(WindowStart);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
         checkBox->setGeometry(QRect(20, 188, 151, 21));

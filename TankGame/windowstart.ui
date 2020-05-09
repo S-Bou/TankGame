@@ -216,7 +216,7 @@ and enjoy</string>
     <bool>true</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/images/greencamouflage.jpg);</string>
+    <string notr="true">background-image: url(:/images/camugrease.jpg);</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox">

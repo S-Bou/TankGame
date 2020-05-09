@@ -12,7 +12,6 @@ public:
     void DecreaseEvaded(void);
     void ResetLives(void);
     void SoundLose(void);
-
     int getEvaded() const;
 
 private:

@@ -12,7 +12,7 @@ Evaded::Evaded(QGraphicsItem *parent) : QGraphicsTextItem(parent)
     setDefaultTextColor(Qt::yellow);
     setFont(QFont("times", 24));
 
-    //Confic sonund for when player lose
+    //Config sonund for when player lose
     soundLose = new QMediaPlayer();
     soundLose->setMedia(QUrl("qrc:/sounds/loseSound.wav"));
 }

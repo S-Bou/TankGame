@@ -4,8 +4,7 @@
         <file>enemyTank.png</file>
         <file>shot.png</file>
         <file>grassTexture.jpg</file>
-        <file>CamouflagePattern.png</file>
-        <file>greencamouflage.jpg</file>
+        <file>camugrease.jpg</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>Disparo.mp3</file>
