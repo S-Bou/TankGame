@@ -70,11 +70,6 @@ void Shot::moveShotPlayer(void)
     {
         if(typeid(*(colliding_items[i])) == typeid(Enemy))
         {
-            if(game->score->getScore() >= 10)
-            {
-                timer->stop();
-            }
-
             //Increase the score
             game->score->IncreaseScore();
             //Remove them both

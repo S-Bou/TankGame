@@ -13,15 +13,15 @@ Evaded::Evaded(QGraphicsItem *parent) : QGraphicsTextItem(parent)
     setFont(QFont("times", 24));
 }
 
-void Evaded::DecreaseEvaded()
+void Evaded::DecreaseEvaded() //Setter
 {
     //If evade 4 or more enemies
     if(evaded <= 0)
     {
         //qDebug() << "Se han evadido 4";
-        evaded = 0;
-        setPlainText("Lives: " + QString::number(evaded));
-        game->ResetGameLose();
+        //evaded = 0;
+        setPlainText("Lives: " + QString::number(0));
+        //game->ResetGameLose();
     }
     else
     {
@@ -34,5 +34,10 @@ void Evaded::ResetLives()
 {
     evaded = 4;
     setPlainText("Lives: " + QString::number(evaded));
+}
+
+int Evaded::getEvaded() const
+{
+    return evaded;
 }
 

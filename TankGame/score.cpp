@@ -13,12 +13,14 @@ Score::Score(QGraphicsItem *parent) : QGraphicsTextItem(parent)
     setFont(QFont("times", 24));
 }
 
-void Score::IncreaseScore()
+void Score::IncreaseScore() //Setter
 {
     if(score >= 10)
     {
         //qDebug() << "10 enemigos destruidos";
-        game->ResetGameWin();
+        //score = 10;
+        setPlainText("Score: " + QString::number(10));
+        //game->ResetGameWin();
     }
     else
     {

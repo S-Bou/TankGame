@@ -20,3 +20,5 @@ void LoseWinText::ShowWin()
     setFont(QFont("times", 36, 75, false));
     setPos(280, 20);
 }
+
+

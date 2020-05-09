@@ -24,7 +24,9 @@ private:
     LoseWinText *losewin;
     QMediaPlayer *music;
     QTimer *timer;
+    QTimer *timerData;
     Player *player;
+
 
 public:
     Game(QWidget *parent=nullptr);
@@ -34,8 +36,12 @@ public:
     void ResetGameWin(void);
     void ResetLevels(void);
     void StateMusic(bool);
+
     Score *score;
     Evaded *evaded;
+
+public slots:
+    void CheckScores(void);
 
 };
 

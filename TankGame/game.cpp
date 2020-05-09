@@ -42,6 +42,11 @@ Game::Game(QWidget *parent) : QGraphicsView(parent)
     //Timer for start show enemies when is pressed button start
     timer = new QTimer();
     connect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
+
+    //Timer for check data constantly for determinade win or lose
+    timerData = new QTimer();
+    connect(timerData, SIGNAL(timeout()), this, SLOT(CheckScores()));
+    timerData->start(500);
 }
 
 Game::~Game()
@@ -78,7 +83,6 @@ void Game::ResetGameWin()
     losewin->ShowWin();
     scene->addItem(losewin);
     s->show();
-
 }
 
 void Game::ResetLevels()
@@ -86,8 +90,19 @@ void Game::ResetLevels()
     evaded->ResetLives();
     score->ResetScore();
     scene->removeItem(losewin);
-    //Shot *shot = new Shot(nullptr);
-    //shot->StopShot();
+}
+
+void Game::CheckScores(void)
+{
+    if(score->getScore() >= 10)
+    {
+        ResetGameWin();
+    }
+
+    if(evaded->getEvaded() <= 0)
+    {
+        ResetGameLose();
+    }
 }
 
 void Game::StateMusic(bool state)

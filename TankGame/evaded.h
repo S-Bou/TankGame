@@ -11,6 +11,8 @@ public:
     void DecreaseEvaded(void);
     void ResetLives(void);
 
+    int getEvaded() const;
+
 private:
     int evaded;
 };
