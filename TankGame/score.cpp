@@ -17,8 +17,7 @@ void Score::IncreaseScore()
 {
     if(score >= 10)
     {
-        qDebug() << "10 enemigos destruidos";
-
+        //qDebug() << "10 enemigos destruidos";
         game->ResetGameWin();
     }
     else
@@ -32,6 +31,11 @@ void Score::ResetScore()
 {
     score = 0;
     setPlainText("Score: " + QString::number(score));
+}
+
+int Score::getScore() const
+{
+    return score;
 }
 
 

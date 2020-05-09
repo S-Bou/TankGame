@@ -22,6 +22,7 @@ class Game : public QGraphicsView
 private:
     QGraphicsScene *scene;
     LoseWinText *losewin;
+    QMediaPlayer *music;
     QTimer *timer;
     Player *player;
 
@@ -32,6 +33,7 @@ public:
     void ResetGameLose(void);
     void ResetGameWin(void);
     void ResetLevels(void);
+    void StateMusic(bool);
     Score *score;
     Evaded *evaded;
 

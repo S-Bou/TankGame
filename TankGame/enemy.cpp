@@ -22,7 +22,7 @@ Enemy::Enemy(): QObject(), QGraphicsPixmapItem()
 
 Enemy::~Enemy()
 {
-    //delete this;
+    delete timer;
 }
 
 void Enemy::moveEnemy()

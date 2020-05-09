@@ -69,7 +69,13 @@ void Shot::moveShotPlayer(void)
     for(int i=0, n=colliding_items.size(); i<n; ++i)
     {
         if(typeid(*(colliding_items[i])) == typeid(Enemy))
-        {   //Increase the score
+        {
+            if(game->score->getScore() >= 10)
+            {
+                timer->stop();
+            }
+
+            //Increase the score
             game->score->IncreaseScore();
             //Remove them both
             scene()->removeItem(colliding_items[i]);

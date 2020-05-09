@@ -10,6 +10,8 @@ public:
     Score(QGraphicsItem *parent=nullptr);
     void IncreaseScore(void);
     void ResetScore(void);
+    int getScore() const;
+
 private:
     int score;
 };

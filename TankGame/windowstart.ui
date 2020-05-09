@@ -10,8 +10,14 @@
     <height>390</height>
    </rect>
   </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <property name="windowTitle">
    <string>TankGame</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -20,7 +26,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>170</y>
+     <y>130</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -42,18 +48,19 @@
   <widget class="QLabel" name="label_Welcome">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>80</x>
      <y>10</y>
-     <width>231</width>
-     <height>31</height>
+     <width>141</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Black</family>
-     <pointsize>14</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <family>Viner Hand ITC</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
      <underline>false</underline>
      <kerning>true</kerning>
     </font>
@@ -62,7 +69,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>Welcome to TankGame</string>
+    <string> TankGame</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_Instructions">
@@ -74,6 +81,70 @@
      <height>151</height>
     </rect>
    </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="128">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="128">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="127">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="128">
+         <red>231</red>
+         <green>231</green>
+         <blue>231</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
    <property name="font">
     <font>
      <family>Segoe UI Black</family>
@@ -81,7 +152,11 @@
      <weight>75</weight>
      <italic>false</italic>
      <bold>true</bold>
+     <kerning>true</kerning>
     </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>Instructions: only you have kill
@@ -96,10 +171,10 @@ Space -&gt; Shot</string>
   <widget class="QLabel" name="label_Start">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>50</y>
-     <width>171</width>
-     <height>91</height>
+     <x>40</x>
+     <y>60</y>
+     <width>211</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -111,8 +186,7 @@ Space -&gt; Shot</string>
     </font>
    </property>
    <property name="text">
-    <string>For play press
-start
+    <string>For play press start
 and enjoy</string>
    </property>
    <property name="alignment">
@@ -120,6 +194,9 @@ and enjoy</string>
    </property>
   </widget>
   <widget class="QGraphicsView" name="graphicsView">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -128,8 +205,43 @@ and enjoy</string>
      <height>390</height>
     </rect>
    </property>
+   <property name="palette">
+    <palette>
+     <active/>
+     <inactive/>
+     <disabled/>
+    </palette>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-image: url(:/images/greencamouflage.jpg);</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>188</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Background music</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
    </property>
   </widget>
   <zorder>graphicsView</zorder>
@@ -137,6 +249,7 @@ and enjoy</string>
   <zorder>label_Welcome</zorder>
   <zorder>label_Instructions</zorder>
   <zorder>label_Start</zorder>
+  <zorder>checkBox</zorder>
  </widget>
  <resources/>
  <connections/>

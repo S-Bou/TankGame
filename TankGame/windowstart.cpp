@@ -23,3 +23,8 @@ void WindowStart::on_pushButton_clicked()
     close();
 }
 
+void WindowStart::on_checkBox_clicked()
+{
+    bool clicked = ui->checkBox->checkState();
+    game->StateMusic(clicked);
+}

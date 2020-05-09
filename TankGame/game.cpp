@@ -4,8 +4,6 @@ extern WindowStart *s;
 
 Game::Game(QWidget *parent) : QGraphicsView(parent)
 {
-    timer = new QTimer();
-
     //Create scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
@@ -37,9 +35,13 @@ Game::Game(QWidget *parent) : QGraphicsView(parent)
     playlist->addMedia(QUrl("qrc:/sounds/MusicBackg.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
     //Play background music as loop
-    QMediaPlayer *music = new QMediaPlayer();
+    music = new QMediaPlayer();
     music->setPlaylist(playlist);
     music->play();
+
+    //Timer for start show enemies when is pressed button start
+    timer = new QTimer();
+    connect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
 }
 
 Game::~Game()
@@ -57,14 +59,13 @@ void Game::StartGame(void)
     player->spawnEnemy();
 
     //timer = new QTimer();
-    connect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
     timer->start(2000);
 }
 
 void Game::ResetGameLose()
 {
     //If evade 4 or more enemies show init window
-    disconnect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
+    timer->stop();
     losewin->ShowLose();
     scene->addItem(losewin);
     s->show();
@@ -73,7 +74,7 @@ void Game::ResetGameLose()
 void Game::ResetGameWin()
 {
     //If destroy 10 or more enemies show init window
-    disconnect(timer, SIGNAL(timeout()), player, SLOT(spawnEnemy()));
+    timer->stop();
     losewin->ShowWin();
     scene->addItem(losewin);
     s->show();
@@ -87,6 +88,18 @@ void Game::ResetLevels()
     scene->removeItem(losewin);
     //Shot *shot = new Shot(nullptr);
     //shot->StopShot();
+}
+
+void Game::StateMusic(bool state)
+{
+    if(!state)
+    {
+        music->stop();
+    }
+    else
+    {
+        music->play();
+    }
 }
 
 
